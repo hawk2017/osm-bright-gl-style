@@ -5,6 +5,7 @@ node_js:
 branches:
   only:
     - master
+    - previews
     - /^v\d+(\.\d+)*$/
 addons:
   apt:
@@ -15,6 +16,7 @@ addons:
       - libstdc++6
 script:
   - 'git clone https://github.com/klokantech/gl-style-package-spec.git'
+  - 'git checkout previews'
   - cd gl-style-package-spec
   - bash ./task/run.sh
 env:
