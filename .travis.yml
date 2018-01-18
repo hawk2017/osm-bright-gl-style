@@ -15,6 +15,7 @@ addons:
     packages:
       - libstdc++6
 script:
+  - docker --version
   - 'git clone https://github.com/klokantech/gl-style-package-spec.git'
   - cd gl-style-package-spec
   - 'git checkout previews'
